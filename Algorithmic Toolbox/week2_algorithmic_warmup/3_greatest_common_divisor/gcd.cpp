@@ -16,8 +16,6 @@ int gcd_naive(int a, int b) {
 int gcd_fast(int a, int b) {
    if (b == 0)
    return a;
-
-   std::cout<<a<<" "<<b<<std::endl;
    return gcd_fast(b, a % b);
 }
 
