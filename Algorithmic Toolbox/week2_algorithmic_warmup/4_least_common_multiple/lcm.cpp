@@ -8,18 +8,20 @@ long long lcm_naive(int a, int b) {
   return (long long) a * b;
 }
 
-int gcd(int a,int b){
+long long gcd(int a, int b){
   if(a == 0)
     return b;
   if(b == 0)
     return a;
   if(a > b)
-  return gcd(a%b, b);
-  else return gcd(a, b%a);
+    return gcd(a%b, b);
+  else 
+    return gcd(a, b%a);
 }
 
-int lcm_fast(int a, int b){
-  return a*b/gcd(a,b);
+long long lcm_fast(int a, int b){
+  long long pro = (long long) a*b ;
+  return (long long) (pro/gcd(a,b));
 }
 
 int main() {
