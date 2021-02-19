@@ -21,9 +21,9 @@ int get_fibonacci_number(int n){
     arr[0] = 0;
     arr[1] = 1;
     for(int i=2; i<=n; i++){
-        arr[i] = arr[i-1] + arr[i-2];
+        arr[i] =( arr[i-1] + arr[i-2])%10;
     }
-    return arr[n];
+    return arr[n] %10;
 }
 
 int get_fibonacci_last_digit_fast(int n){
