@@ -16,18 +16,16 @@ int get_fibonacci_last_digit_naive(int n) {
     return current % 10;
 }
 
-int get_fibonacci_number(int n){
-    int arr[n] ={0};
-    arr[0] = 0;
-    arr[1] = 1;
-    for(int i=2; i<=n; i++){
-        arr[i] =( arr[i-1] + arr[i-2])%10;
-    }
-    return arr[n] %10;
-}
 
 int get_fibonacci_last_digit_fast(int n){
-    return get_fibonacci_number(n) %10;
+    int pre =0;
+    int cur =1;
+    for(int i=0; i<n-1; i++){
+        int temp = pre%10;
+        pre = cur %10;
+        cur = temp +cur %10;
+    }
+    return cur%10;
 }
 int main() {
     int n;
