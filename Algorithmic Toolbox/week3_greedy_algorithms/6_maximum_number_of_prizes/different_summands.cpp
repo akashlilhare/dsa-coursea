@@ -1,11 +1,32 @@
 #include <iostream>
 #include <vector>
-
-using std::vector;
+#include <cmath>
+using namespace std;
 
 vector<int> optimal_summands(int n) {
   vector<int> summands;
-  //write your code here
+  
+  if(n<=2){
+    summands.push_back(n);
+    return summands;
+  }
+
+  int k = static_cast<int>(floor(sqrt(n)));
+
+  while(k *(k+1)/2 <=n){
+    k++;
+  }
+
+  k--;
+  summands.reserve(k);
+  for(int i=1; i<=k; i++){
+    if(i == k){
+      summands.push_back(n);
+    }else{
+      n -= i;
+      summands.push_back(i);
+    }
+  }
   return summands;
 }
 
