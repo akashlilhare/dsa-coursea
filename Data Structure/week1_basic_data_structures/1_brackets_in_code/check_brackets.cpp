@@ -31,15 +31,25 @@ int main() {
         char next = text[position];
 
         if (next == '(' || next == '[' || next == '{') {
-            // Process opening bracket, write your code here
+            opening_brackets_stack.push(Bracket(next, position));
         }
 
         if (next == ')' || next == ']' || next == '}') {
-            // Process closing bracket, write your code here
+           char curr_type = opening_brackets_stack.top().type;
+           std::cout<<curr_type<<std::endl;
+           bool match = opening_brackets_stack.top().Matchc(curr_type);
+        //    if(match == false){
+        //        break; 
+        //    }
+           opening_brackets_stack.pop();
         }
     }
 
-    // Printing answer, write your code here
+    if(opening_brackets_stack.empty() == true){
+        std::cout<<"Success";
+    }else{
+        std::cout<<text.length();
+    }
 
     return 0;
 }
