@@ -31,10 +31,26 @@ public:
 
     Response Process(const Request &request) {
         // write your code here
+		// let's start by clearing all the tasks that should be already processed.
+		while (!finish_time_.empty() && finish_time_.front() <= request.arrival_time)
+		{
+			finish_time_.pop_front();
+		}
+		bool dropped = ((this->finish_time_.size() == this->size_) && (request.arrival_time < this->finish_time_.back()));
+		int start_time = -1;
+		if (!dropped) {
+			if (finish_time_.empty())
+				start_time = request.arrival_time;
+			else
+			    start_time = std::max(finish_time_.back(), request.arrival_time);
+
+			finish_time_.push_back(start_time + request.process_time);
+		}
+		return Response(dropped, start_time);
     }
 private:
     int size_;
-    std::queue <int> finish_time_;
+    std::deque <int> finish_time_;
 };
 
 std::vector <Request> ReadRequests() {
