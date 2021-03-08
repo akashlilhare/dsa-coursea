@@ -31,16 +31,14 @@ int main() {
         char next = text[position];
 
         if (next == '(' || next == '[' || next == '{') {
-            opening_brackets_stack.push(Bracket(next, position));
+            opening_brackets_stack.push(Bracket(next, position+1));
         }
 
         if (next == ')' || next == ']' || next == '}') {
-           char curr_type = opening_brackets_stack.top().type;
-           std::cout<<curr_type<<std::endl;
-           bool match = opening_brackets_stack.top().Matchc(curr_type);
-        //    if(match == false){
-        //        break; 
-        //    }
+           if(opening_brackets_stack.size() == 0 || not opening_brackets_stack.top().Matchc(next)){
+               std::cout<<position+1<<std::endl;
+               return 0;
+           }
            opening_brackets_stack.pop();
         }
     }
@@ -48,7 +46,7 @@ int main() {
     if(opening_brackets_stack.empty() == true){
         std::cout<<"Success";
     }else{
-        std::cout<<text.length();
+        std::cout<<opening_brackets_stack.top().position<<std::endl;
     }
 
     return 0;
