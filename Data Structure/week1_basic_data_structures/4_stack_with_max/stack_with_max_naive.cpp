@@ -1,22 +1,19 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <cassert>
-#include <algorithm>
 
-using std::cin;
-using std::string;
-using std::vector;
-using std::cout;
-using std::max_element;
+#include<bits/stdc++.h>
 
+using namespace std;
 class StackWithMax {
-    vector<int> stack;
+    vector <pair<int,int>> stack;
 
   public:
 
     void Push(int value) {
-        stack.push_back(value);
+        if(stack.size()==0)
+            stack.push_back({value,value});
+        else
+            stack.push_back({value,max(stack.back().second,value)});
+        
+        
     }
 
     void Pop() {
@@ -26,7 +23,7 @@ class StackWithMax {
 
     int Max() const {
         assert(stack.size());
-        return *max_element(stack.begin(), stack.end());
+        return stack.back().second;
     }
 };
 
