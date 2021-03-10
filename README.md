@@ -1,5 +1,6 @@
 ## Data Structures and Algorithms specialization offered by University of California San Diego and National Research University Higher School of Economics  
-This specialization content can be found [here](https://www.coursera.org/specializations/data-structures-algorithms) on coursera  
+
+#### This specialization content can be found [here](https://www.coursera.org/specializations/data-structures-algorithms) on coursera  
 
 ## [Algorithmic Toolbox, course 1](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox)  
 
@@ -7,7 +8,7 @@ This specialization content can be found [here](https://www.coursera.org/special
 The course covers basic algorithmic techniques and ideas for computational problems arising frequently in practical applications: sorting and searching, divide and conquer, greedy algorithms, dynamic programming. We will learn a lot of theory: how to sort data and how it helps for searching; how to break a large problem into pieces and solve them recursively; when it makes sense to proceed greedily; how dynamic programming is used in genomic studies. You will practice solving computational problems, designing new algorithms, and implementing solutions efficiently (so that they run in less than a second).
 </p>
         
-This course content can be found [here](https://www.coursera.org/learn/algorithmic-toolbox/) on coursera
+#### This course content can be found [here](https://www.coursera.org/learn/algorithmic-toolbox/) on coursera
 
 ### Week 1: Programming challenges
 >[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week1_programming_challenges)   
@@ -38,7 +39,8 @@ This course content can be found [here](https://www.coursera.org/learn/algorithm
 A good algorithm usually comes together with a set of good data structures that allow the algorithm to manipulate the data efficiently. In this course, we consider the common data structures that are used in various computational problems. You will learn how these data structures are implemented in different programming languages and will practice implementing them in our programming assignments. This will help you to understand what is going on inside a particular built-in implementation of a data structure and what to expect from it. You will also learn typical use cases for these data structures.
 </p>
 
-This course content can be found [here](https://www.coursera.org/learn/data-structures?specialization=data-structures-algorithms) on coursera
+#### This course content can be found [here](https://www.coursera.org/learn/data-structures?specialization=data-structures-algorithms) on coursera
+
 ### Week 1: Basic data structures
 >[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Data%20Structure/week1_basic_data_structures)   
 
