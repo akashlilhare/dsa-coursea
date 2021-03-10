@@ -10,28 +10,28 @@ The course covers basic algorithmic techniques and ideas for computational probl
 This course content can be found [here](https://www.coursera.org/learn/algorithmic-toolbox/) on coursera
 
 ### Week 1: Programming challenges
-[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week1_programming_challenges)   
+>[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week1_programming_challenges)   
 
 
 ### Week 2: Algorithmic_warmup
-[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week2_algorithmic_warmup)  
+>[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week2_algorithmic_warmup)  
 
 
 ### Week 3: Greedy algorithms
-[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week3_greedy_algorithms)  
+>[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week3_greedy_algorithms)  
 
 
 ### Week 4: Divide and conquer
-[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week4_divide_and_conquer)  
+>[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week4_divide_and_conquer)  
 
 
 ### Week 5: Dynamic programming 1
-[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week5_dynamic_programming1)  
+>[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week5_dynamic_programming1)  
 
 ### Week 6: Dynamic programming 2
-questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week6_dynamic_programming2)  
+>[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week6_dynamic_programming2)  
 
-notes about [dynamic programming](https://github.com/sudheernaidu53/Data-Structures-and-Algorithms-specialization-University-of-California-San-Diego/blob/master/course%201%20-%20Algorithmic%20toolbox/dynprog.pdf)  
+
 
 ## [Data Structures, course 2](https://github.com/sudheernaidu53/Data-Structures-and-Algorithms-specialization-University-of-California-San-Diego/tree/master/course%202%20-%20Data%20Structures)  
 <p>
