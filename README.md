@@ -38,22 +38,19 @@ This course content can be found [here](https://www.coursera.org/learn/algorithm
 A good algorithm usually comes together with a set of good data structures that allow the algorithm to manipulate the data efficiently. In this course, we consider the common data structures that are used in various computational problems. You will learn how these data structures are implemented in different programming languages and will practice implementing them in our programming assignments. This will help you to understand what is going on inside a particular built-in implementation of a data structure and what to expect from it. You will also learn typical use cases for these data structures.
 </p>
 
-This course content can be found [here](https://www.coursera.org/learn/data-structures?specialization=data-structures-algorithms) on coursera
+[This course content can be found [here](https://www.coursera.org/learn/data-structures?specialization=data-structures-algorithms) on coursera
 ### Week 1: Basic data structures
-questions and solutions](https://github.com/sudheernaidu53/Data-Structures-and-Algorithms-specialization-University-of-California-San-Diego/tree/master/course%202%20-%20Data%20Structures/week1_basic_data_structures)   
+>[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Data%20Structure/week1_basic_data_structures)   
 
 
-### Week 2: Amortized analysis
-questions and solutions](https://github.com/sudheernaidu53/Data-Structures-and-Algorithms-specialization-University-of-California-San-Diego/tree/master/course%202%20-%20Data%20Structures/week2%20amortized%20analysis)  
+### Week 2: Priority queues and Disjoint sets
+>[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Data%20Structure/week2_priority_queues_and_disjoint_sets)  
 
 
-### Week 3: Priority queues and Disjoint sets
-questions and solutions](https://github.com/sudheernaidu53/Data-Structures-and-Algorithms-specialization-University-of-California-San-Diego/tree/master/course%202%20-%20Data%20Structures/week3%20assignment%202_priority_queues_and_disjoint_sets)  
+### Week 3: Hash tables
+>[questions and solutions]
+(https://github.com/akashlilhare/DSA/tree/master/Data%20Structure/week3_hash_tables)  
 
 
-### Week 4: Hash tables
-questions and solutions](https://github.com/sudheernaidu53/Data-Structures-and-Algorithms-specialization-University-of-California-San-Diego/tree/master/course%202%20-%20Data%20Structures/week4%20assignment%203_hash_tables)  
-
-
-### Week 5 and Week 6: Binary Search trees
-questions and solutions](https://github.com/sudheernaidu53/Data-Structures-and-Algorithms-specialization-University-of-California-San-Diego/tree/master/course%202%20-%20Data%20Structures/week5%20%26%206%20assignment%204%20_binary_search_trees)  
+### Week 4: Binary Search trees
+>[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Data%20Structure/week4_binary_search_trees)  
