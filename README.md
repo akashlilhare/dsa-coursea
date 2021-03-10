@@ -1,12 +1,6 @@
 ## Data Structures and Algorithms specialization offered by University of California San Diego and National Research University Higher School of Economics  
 This specialization content can be found [here](https://www.coursera.org/specializations/data-structures-algorithms) on coursera  
 
-<p align="center">
-<a target="_blank">
-        <img src="https://github.com/akashlilhare/DSA/blob/master/algo.jpg" 
-alt="https://www.coursera.org/specializations/data-structures-algorithms" width="500" height="250" border="10" align="center"/></a>
-</p>
-
 ## [Algorithmic Toolbox, course 1](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox)  
 
 <p>
