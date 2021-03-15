@@ -7,6 +7,7 @@ using std::vector;
 int get_majority_element(vector<int> &a, int left, int right) {
   if (left == right) return -1;
   if (left + 1 == right) return a[left];
+<<<<<<< HEAD
   
   sort(a.begin(), a.end());
   int mid = (left + right)/2;
@@ -25,6 +26,12 @@ int get_majority_element(vector<int> &a, int left, int right) {
 
 
 
+=======
+  //write your code here
+  return -1;
+}
+
+>>>>>>> eecc4387e852d46461d27b9fddba0c632269b313
 int main() {
   int n;
   std::cin >> n;

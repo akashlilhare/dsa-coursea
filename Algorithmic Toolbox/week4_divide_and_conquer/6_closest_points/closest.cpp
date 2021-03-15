@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <math.h>
 
 #include <algorithm>
@@ -118,3 +119,35 @@ int main() {
 	cout << setprecision(9) << minimal_distance(points, 0, points.size() - 1)
 		 << endl;
 }
+=======
+#include <algorithm>
+#include <iostream>
+#include <sstream>
+#include <iomanip>
+#include <vector>
+#include <string>
+#include <cmath>
+
+using std::vector;
+using std::string;
+using std::pair;
+using std::min;
+
+
+double minimal_distance(vector<int> x, vector<int> y) {
+  //write your code here
+  return 0.;
+}
+
+int main() {
+  size_t n;
+  std::cin >> n;
+  vector<int> x(n);
+  vector<int> y(n);
+  for (size_t i = 0; i < n; i++) {
+    std::cin >> x[i] >> y[i];
+  }
+  std::cout << std::fixed;
+  std::cout << std::setprecision(9) << minimal_distance(x, y) << "\n";
+}
+>>>>>>> eecc4387e852d46461d27b9fddba0c632269b313
