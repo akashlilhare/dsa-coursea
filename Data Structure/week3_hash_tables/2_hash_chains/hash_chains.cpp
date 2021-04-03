@@ -2,15 +2,13 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <utility>
+#include <list>
+#include <array>
 
-/*********************************
-******                      ******
-***        Ayran Olckers       ***
-**                              **
-**            07/2019           **
-******                      ******
-**********************************/
-
+using std::string;
+using std::vector;
+using std::cin;
 
 using namespace std;
 
@@ -20,22 +18,28 @@ struct Query {
 };
 
 class QueryProcessor {
-private:
     int bucket_count;
-    vector<string> elems;
-    vector<vector<string>> Hashmap = vector<vector<string>>(bucket_count);
+    // store all strings in one vector
+	vector<list<string>> elems;
     size_t hash_func(const string& s) const {
         static const size_t multiplier = 263;
         static const size_t prime = 1000000007;
         unsigned long long hash = 0;
         for (int i = static_cast<int> (s.size()) - 1; i >= 0; --i)
-            hash = (hash * multiplier + s[i]) % prime;
+            hash = (( (hash * multiplier + s[i]) % prime) + prime) % prime;
         return hash % bucket_count;
     }
-    
+
 public:
-    explicit QueryProcessor(int bucket_count): bucket_count(bucket_count) {}
-    
+	explicit QueryProcessor(int bucket_count) {
+		this->bucket_count = bucket_count;
+		list<string> l;// = { "" };
+		for (size_t i = 0; i < bucket_count; i++)
+		{
+			this->elems.push_back(l);
+		}
+	}
+
     Query readQuery() const {
         Query query;
         cin >> query.type;
@@ -45,40 +49,51 @@ public:
             cin >> query.ind;
         return query;
     }
-    vector<string> ans;
-    vector<string> writeSearchResult(bool was_found) const {
-        
-        (was_found ? ans.push_back("yes") : ans.push_back("no"));
-        return ans;
+
+    void writeSearchResult(bool was_found) const {
+        std::cout << (was_found ? "yes\n" : "no\n");
     }
-    
+
     void processQuery(const Query& query) {
         if (query.type == "check") {
-            if (Hashmap[query.ind].size() != 0) {
-                for (int i = static_cast<int>(Hashmap[query.ind].size()) - 1; i >= 0; --i)
-                    cout << Hashmap[query.ind][i] << " ";
-            }
-            cout << "\n";
-        } else {
-            size_t ind = hash_func(query.s);
-            vector<string>::iterator it = std::find(Hashmap[ind].begin(), Hashmap[ind].end(), query.s);
-            if (query.type == "find")
-                writeSearchResult(it != Hashmap[ind].end());
-            else if (query.type == "add") {
-                if (it == Hashmap[ind].end())
-                    Hashmap[ind].push_back(query.s);
-            } else if (query.type == "del") {
-                if (it != Hashmap[ind].end())
-                    Hashmap[ind].erase(it);
-            }
+            // use reverse order, because we append strings to the end
+			if (query.ind < elems.size()) {
+				auto L = elems[query.ind];
+				for (auto s : L) {
+					std::cout << s << " ";
+				}
+				std::cout << endl;
+			}
+        } 
+		else {
+			size_t hash_idx = hash_func(query.s);
+			auto it = std::find(elems[hash_idx].begin(), elems[hash_idx].end(), query.s);
+			if (query.type == "find")
+				writeSearchResult(it != elems[hash_idx].end());
+			else if (query.type == "add") {
+				if (it == elems[hash_idx].end())
+					elems[hash_idx].push_front(query.s);
+			}
+			else if (query.type == "del") {
+				if (it != elems[hash_idx].end())
+					elems[hash_idx].erase(it);
+			}
+
         }
     }
-    
+
+
+
     void processQueries() {
         int n;
         cin >> n;
-        for (int i = 0; i < n; ++i)
-            processQuery(readQuery());
+		vector<Query> queries(n);
+		for (int i = 0; i < n; ++i)
+			queries[i] = readQuery();
+
+		for (int i = 0; i < n; ++i)
+            processQuery(queries[i]);
+		std::cout << endl;
     }
 };
 
@@ -88,9 +103,5 @@ int main() {
     cin >> bucket_count;
     QueryProcessor proc(bucket_count);
     proc.processQueries();
-    
-    for(auto i: proc.ans){
-        cout<<i<<endl;
-    }
     return 0;
 }
