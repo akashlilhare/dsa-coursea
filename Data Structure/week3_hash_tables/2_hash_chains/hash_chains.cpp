@@ -3,9 +3,16 @@
 #include <vector>
 #include <algorithm>
 
-using std::string;
-using std::vector;
-using std::cin;
+/*********************************
+******                      ******
+***        Ayran Olckers       ***
+**                              **
+**            07/2019           **
+******                      ******
+**********************************/
+
+
+using namespace std;
 
 struct Query {
     string type, s;
@@ -13,9 +20,10 @@ struct Query {
 };
 
 class QueryProcessor {
+private:
     int bucket_count;
-    // store all strings in one vector
     vector<string> elems;
+    vector<vector<string>> Hashmap = vector<vector<string>>(bucket_count);
     size_t hash_func(const string& s) const {
         static const size_t multiplier = 263;
         static const size_t prime = 1000000007;
@@ -24,10 +32,10 @@ class QueryProcessor {
             hash = (hash * multiplier + s[i]) % prime;
         return hash % bucket_count;
     }
-
+    
 public:
     explicit QueryProcessor(int bucket_count): bucket_count(bucket_count) {}
-
+    
     Query readQuery() const {
         Query query;
         cin >> query.type;
@@ -37,32 +45,35 @@ public:
             cin >> query.ind;
         return query;
     }
-
-    void writeSearchResult(bool was_found) const {
-        std::cout << (was_found ? "yes\n" : "no\n");
+    vector<string> ans;
+    vector<string> writeSearchResult(bool was_found) const {
+        
+        (was_found ? ans.push_back("yes") : ans.push_back("no"));
+        return ans;
     }
-
+    
     void processQuery(const Query& query) {
         if (query.type == "check") {
-            // use reverse order, because we append strings to the end
-            for (int i = static_cast<int>(elems.size()) - 1; i >= 0; --i)
-                if (hash_func(elems[i]) == query.ind)
-                    std::cout << elems[i] << " ";
-            std::cout << "\n";
+            if (Hashmap[query.ind].size() != 0) {
+                for (int i = static_cast<int>(Hashmap[query.ind].size()) - 1; i >= 0; --i)
+                    cout << Hashmap[query.ind][i] << " ";
+            }
+            cout << "\n";
         } else {
-            vector<string>::iterator it = std::find(elems.begin(), elems.end(), query.s);
+            size_t ind = hash_func(query.s);
+            vector<string>::iterator it = std::find(Hashmap[ind].begin(), Hashmap[ind].end(), query.s);
             if (query.type == "find")
-                writeSearchResult(it != elems.end());
+                writeSearchResult(it != Hashmap[ind].end());
             else if (query.type == "add") {
-                if (it == elems.end())
-                    elems.push_back(query.s);
+                if (it == Hashmap[ind].end())
+                    Hashmap[ind].push_back(query.s);
             } else if (query.type == "del") {
-                if (it != elems.end())
-                    elems.erase(it);
+                if (it != Hashmap[ind].end())
+                    Hashmap[ind].erase(it);
             }
         }
     }
-
+    
     void processQueries() {
         int n;
         cin >> n;
@@ -77,5 +88,9 @@ int main() {
     cin >> bucket_count;
     QueryProcessor proc(bucket_count);
     proc.processQueries();
+    
+    for(auto i: proc.ans){
+        cout<<i<<endl;
+    }
     return 0;
 }
