@@ -11,7 +11,7 @@ The course covers basic algorithmic techniques and ideas for computational probl
 #### This course content can be found [here](https://www.coursera.org/learn/algorithmic-toolbox/) on coursera
 
 ### Week 1: Programming challenges
->[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week1_programming_challenges)   
+>[questions and solutions](https://github.com/akashlilhare/dsa-coursea/tree/master/Algorithmic%20Toolbox/week1_programming_challengess)   
 
 
 ### Week 2: Algorithmic_warmup
