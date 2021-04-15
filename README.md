@@ -42,16 +42,16 @@ A good algorithm usually comes together with a set of good data structures that 
 #### This course content can be found [here](https://www.coursera.org/learn/data-structures?specialization=data-structures-algorithms) on coursera
 
 ### Week 1: Basic data structures
->[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Data%20Structure/week1_basic_data_structures)   
+>[questions and solutions](https://github.com/akashlilhare/dsa-coursea/tree/master/Data%20Structure/week1_basic_data_structures)   
 
 
 ### Week 2: Priority queues and Disjoint sets
->[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Data%20Structure/week2_priority_queues_and_disjoint_sets)  
+>[questions and solutions](https://github.com/akashlilhare/dsa-coursea/tree/master/Data%20Structure/week2_priority_queues_and_disjoint_sets)  
 
 
 ### Week 3: Hash tables
->[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Data%20Structure/week3_hash_tables)  
+>[questions and solutions](https://github.com/akashlilhare/dsa-coursea/tree/master/Data%20Structure/week3_hash_tables)  
 
 
 ### Week 4: Binary Search trees
->[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Data%20Structure/week4_binary_search_trees)  
+>[questions and solutions](https://github.com/akashlilhare/dsa-coursea/tree/master/Data%20Structure/week4_binary_search_trees)  
