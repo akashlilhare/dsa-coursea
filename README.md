@@ -15,22 +15,22 @@ The course covers basic algorithmic techniques and ideas for computational probl
 
 
 ### Week 2: Algorithmic_warmup
->[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week2_algorithmic_warmup)  
+>[questions and solutions](https://github.com/akashlilhare/dsa-coursea/tree/master/Algorithmic%20Toolbox/week2_algorithmic_warmup)  
 
 
 ### Week 3: Greedy algorithms
->[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week3_greedy_algorithms)  
+>[questions and solutions](https://github.com/akashlilhare/dsa-coursea/tree/master/Algorithmic%20Toolbox/week3_greedy_algorithms)  
 
 
 ### Week 4: Divide and conquer
->[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week4_divide_and_conquer)  
+>[questions and solutions](https://github.com/akashlilhare/dsa-coursea/tree/master/Algorithmic%20Toolbox/week4_divide_and_conquer)  
 
 
 ### Week 5: Dynamic programming 1
->[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week5_dynamic_programming1)  
+>[questions and solutions](https://github.com/akashlilhare/dsa-coursea/tree/master/Algorithmic%20Toolbox/week5_dynamic_programming1)  
 
 ### Week 6: Dynamic programming 2
->[questions and solutions](https://github.com/akashlilhare/DSA/tree/master/Algorithmic%20Toolbox/week6_dynamic_programming2)  
+>[questions and solutions](https://github.com/akashlilhare/dsa-coursea/tree/master/Algorithmic%20Toolbox/week6_dynamic_programming2)  
 
 
 
